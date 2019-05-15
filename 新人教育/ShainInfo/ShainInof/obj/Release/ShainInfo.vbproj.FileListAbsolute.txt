@@ -1,0 +1,15 @@
+C:\Users\asupage\Desktop\新人教育\ShainInfo\ShainInof\bin\Release\ShainInof.exe.config
+C:\Users\asupage\Desktop\新人教育\ShainInfo\ShainInof\bin\Release\ShainInof.exe
+C:\Users\asupage\Desktop\新人教育\ShainInfo\ShainInof\bin\Release\ShainInof.pdb
+C:\Users\asupage\Desktop\新人教育\ShainInfo\ShainInof\bin\Release\ShainInof.xml
+C:\Users\asupage\Desktop\新人教育\ShainInfo\ShainInof\obj\Release\ShainInof.AddEdit.resources
+C:\Users\asupage\Desktop\新人教育\ShainInfo\ShainInof\obj\Release\ShainInof.MasterEdit.resources
+C:\Users\asupage\Desktop\新人教育\ShainInfo\ShainInof\obj\Release\ShainInof.Menu.resources
+C:\Users\asupage\Desktop\新人教育\ShainInfo\ShainInof\obj\Release\ShainInof.Resources.resources
+C:\Users\asupage\Desktop\新人教育\ShainInfo\ShainInof\obj\Release\ShainInof.UserList.resources
+C:\Users\asupage\Desktop\新人教育\ShainInfo\ShainInof\obj\Release\ShainInfo.vbproj.GenerateResource.cache
+C:\Users\asupage\Desktop\新人教育\ShainInfo\ShainInof\obj\Release\ShainInfo.vbproj.CoreCompileInputs.cache
+C:\Users\asupage\Desktop\新人教育\ShainInfo\ShainInof\obj\Release\ShainInof.exe
+C:\Users\asupage\Desktop\新人教育\ShainInfo\ShainInof\obj\Release\ShainInof.xml
+C:\Users\asupage\Desktop\新人教育\ShainInfo\ShainInof\obj\Release\ShainInof.pdb
+C:\Users\asupage\Desktop\新人教育\ShainInfo\ShainInof\obj\Release\ShainInfo.vbprojAssemblyReference.cache
