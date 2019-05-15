@@ -9,7 +9,3 @@ master（他はSTAGING） - 今、サービス中のBRANCH
 release - featureから開発が完了すれば、delveopにマージする。そして、修正したバージョンが配布する時に、MASTERにもマージする
 
 hotfix - MasterからBranch使ってHotFixを生成、修正したバージョンが配布する時に、MASTERとDevelopにマージする
-
-------------------------------------------------
-
-test
