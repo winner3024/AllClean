@@ -1,16 +1,30 @@
-git flowのBRANCH戦略
-
-develop - 開発の核になるBRANCH
-
-feature - developからBRANCHを取って、開発をする。（新規、改修など）
-
-master（他はSTAGING） - 今、サービス中のBRANCH
-
-release - featureから開発が完了すれば、delveopにマージする。そして、修正したバージョンが配布する時に、MASTERにもマージする
-
-hotfix - MasterからBranch使ってHotFixを生成、修正したバージョンが配布する時に、MASTERとDevelopにマージする
-
-------------------------------------------------
-
-test
-pqmm test
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaa
+aaaaaaaaaaaaaa
+aaaaaaaaaaaaa
+aaaaaaaaaaaa
+aaaaaaaaaaa
+aaaaaaaaaa
+aaaaaaaaa
+aaaaaaaa
+aaaaaaa
+aaaaaa
+aaaaa
+aaaa
+aaa
+aa
+a
