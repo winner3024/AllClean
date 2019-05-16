@@ -1,0 +1,997 @@
+1.extension
+
+---------------------------------------------------------------
+Java
+---------------------------------------------------------------
+
+package hello;
+
+
+public class HelloWorld {
+   public static void main(String[] args) {
+      String name = "Java";
+
+      // 매개변수를 확인
+      if (args.length == 1)
+         name = args[0];
+
+      System.out.println("Hello, " + name + "!");
+    }
+}
+
+---------------------------------------------------------------
+C#
+---------------------------------------------------------------
+
+using System; 
+
+namespace Hello {
+   public class HelloWorld {
+      public static void Main(string[] args) {
+         string name = "C#";
+
+         // 매개변수를 확인
+         if (args.Length == 1)
+            name = args[0];
+
+         Console.WriteLine("Hello, " + name + "!");
+      }
+   }
+}
+
+Java is *.java, C# is *.cs
+
+Java는 클래스마다 별도의 파일을 작성해야 하고 클래스명과 파일명이 일치해야 하지만, 
+C#에서는 하나 이상의 최상위 클래스를 작성할 수 있고 파일명에 대한 제한도 없다.
+
+
+
+
+2.package
+
+---------------------------------------------------------------
+Java
+---------------------------------------------------------------
+
+package harding.compsci.graphics;
+
+// import the single class
+import harding.compsci.graphics.Rectangle;
+// import the multi class
+import harding.compsci.graphics.*; 
+
+---------------------------------------------------------------
+C#
+---------------------------------------------------------------
+
+
+namespace Harding.Compsci.Graphics {
+  ...
+}
+또는
+namespace Harding {
+  namespace Compsci {
+    namespace Graphics {
+      ...
+    }
+  }
+}
+// import the single class
+using Rectangle = Harding.CompSci.Graphics.Rectangle;
+// import the multi class
+using Harding.Compsci.Graphics;
+
+Java는 소스 코드의 첫 줄에 package를 선언하지만, 
+C#에서는 namespace 키워드를 사용해서 블록으로 묶는다. 
+
+C#에서는 하나의 소스 코드 파일에 여러 개의 네임스페이스를 포함시는 것도 가능하다.
+Java의 import 키워드 대신, C#에서는 using 키워드를 사용한다. 
+using 키워드를 namespace 블록 내부에 사용할 수도 있다. 
+
+using 키워드를 사용해서 별칭을 지정할 수도 있다.
+
+
+
+
+
+3.comments
+
+---------------------------------------------------------------
+Java
+---------------------------------------------------------------
+
+// 한 줄 주석
+/* 여러 줄
+    주석  */
+/** 자바독 문서화 주석 */
+
+---------------------------------------------------------------
+C#
+---------------------------------------------------------------
+
+// 한 줄 주석
+/* 여러 줄
+    주석  */
+/// 한 줄 XML 주석
+/** 여러 줄 XML 주석 */
+
+
+
+
+
+4.자료형
+---------------------------------------------------------------
+Java
+---------------------------------------------------------------
+
+원시 자료형
+boolean
+byte
+char
+short, int, long
+float, double
+
+
+참조 자료형
+Object   (다른 모든 클래스들의 부모 클래스)
+String
+arrays, classes, interfaces
+
+형 변환
+// 정수를 문자열로 
+int x = 123; 
+String y = Integer.toString(x);  // y is "123"
+// 문자열을 정수로
+y = "456"; 
+x = Integer.parseInt(y);   // x is 456
+// 부동소수를 정수로
+double z = 3.5; 
+x = (int) z;   // x는 3  (소수부는 잘림)
+
+
+
+
+
+---------------------------------------------------------------
+C#
+---------------------------------------------------------------
+
+값 타입
+bool
+byte, sbyte
+char
+short, ushort, int, uint, long, ulong
+float, double, decimal
+structures, enumerations
+
+참조 자료형
+object    ( 다른 모든 클래스들의 부모 클래스)
+string
+arrays, classes, interfaces, delegates
+
+형 변환
+// 정수를 문자열로 
+int x = 123; 
+String y = x.ToString();  // y is "123"
+// 문자열을 정수로
+y = "456"; 
+x = int.Parse(y);   // 또는 x = Convert.ToInt32(y);
+// 부동소수를 정수로
+double z = 3.5; 
+x = (int) z;   // x는 3  (소수부는 잘림)
+Java에서 지원되는 원시 자료형과 더불어, C#에서는 부호 없는(unsigned) 자료형과 128비트 부동 소수 형식(decimal)을 추가로 지원한다.
+
+Java에서는 원시 자료형이 존재하고 각각의 래퍼 클래스가 존재하지만, C#에서 모든 원시 자료형은 System 네임스페이스의 객체이며 각각 별칭이 존재한다.
+
+Java의 boolean은 C#에서 bool이다.
+
+
+5.상수
+
+---------------------------------------------------------------
+Java
+---------------------------------------------------------------
+
+// 생성자에서 초기화 될 수 있음
+final double PI = 3.14;
+
+---------------------------------------------------------------
+C#
+---------------------------------------------------------------
+
+
+const double PI = 3.14;
+
+// const 또는 변수에 지정할 수 있음. 생성자에서 초기화 될 수 있음.
+readonly int MAX_HEIGHT = 9;
+Java에서는 final 키워드를, C#에서는 const와 readonly 키워드를 사용한다.
+
+const 키워드를 사용하면 런타임시에 값을 변경할 수 없지만, readonly 키워드를 지정하면 런타임시에 단 한번 값을 지정할 수 있다.
+
+
+
+
+
+6.열거형
+
+---------------------------------------------------------------------
+Java
+---------------------------------------------------------------
+
+
+enum Action {Start, Stop, Rewind, Forward};
+// 특수한 형태의 클래스이다. 
+enum Status {
+  Flunk(50), Pass(70), Excel(90);
+  private final int value;
+  Status(int value) { this.value = value; }
+  public int value() { return value; } 
+};
+Action a = Action.Stop;
+if (a != Action.Start)
+  System.out.println(a);      // Prints "Stop"
+Status s = Status.Pass;
+System.out.println(s.value());      // Prints "70"
+
+---------------------------------------------------------------
+C#
+---------------------------------------------------------------
+
+enum Action {Start, Stop, Rewind, Forward};
+enum Status {Flunk = 50, Pass = 70, Excel = 90};
+
+Action a = Action.Stop;
+if (a != Action.Start)
+  Console.WriteLine(a);             // Prints "Stop"
+Status s = Status.Pass;
+Console.WriteLine((int) s);       // Prints "70"
+Java 1.5 이상에서 enum을 지원한다.
+
+C# 3.0 이상에서는 확장메서드를 통해서 enum 타입에 메서드를 정의할 수 있다.
+
+
+
+
+
+7.연산자
+---------------------------------------------------------------
+Java
+---------------------------------------------------------------
+
+비교
+==  <  >  <=  >=  !=
+
+산술
++  -  *  /
+%  (mod)
+/   (integer division if both operands are ints)
+Math.Pow(x, y)
+
+할당
+=  +=  -=  *=  /=   %=   &=  |=  ^=  <<=  >>=  >>>=  ++  --
+
+비트
+&  |  ^   ~  <<  >>  >>>
+
+논리
+&&  ||  &  |   ^   !
+
+문자열 결합
++
+
+
+
+
+
+
+---------------------------------------------------------------
+C#
+---------------------------------------------------------------
+
+비교
+==  <  >  <=  >=  !=
+
+산술
++  -  *  /
+%  (mod)
+/   (integer division if both operands are ints)
+Math.Pow(x, y)
+
+할당
+=  +=  -=  *=  /=   %=  &=  |=  ^=  <<=  >>=  ++  --
+
+
+비트
+&  |  ^   ~  <<  >>
+
+논리
+&&  ||  &  |   ^   !
+
+문자열 결합
++
+
+8.연산자 오버로딩
+public static ComplexNumber operator+(ComplexNumber a, ComplexNumber b) { ...
+Java의 >>> 연산자는 C#에서 사용할 수 없다. 이는 부호없는 자료형이 지원되기 때문이다.
+
+C#의 checked, unchecked 키워드를 사용해서 오버플로우를 검사할 수 있다.
+
+C#에서는 연산자 오버로딩을 위해 operator 키워드를 지원한다.
+
+연산자 오버로딩은 static 메서드로 선언하고 메서드 이름 대신에 operator 키워드와 연산자 심볼을 붙인다.
+
+9.조건문
+Java
+
+greeting = age < 20 ? "What's up?" : "Hello";
+
+if (x < y) 
+  System.out.println("greater");
+
+if (x != 100) {    
+  x *= 5; 
+  y *= 2; 
+} 
+else 
+  z *= 6;
+
+int selection = 2;
+switch (selection) { // byte, short, int, char, enum
+  case 1: x++;   // break가 없으면 다음으로 넘어간다
+  case 2: y++;   break; 
+  case 3: z++;   break; 
+  default: other++;
+}
+C#
+
+greeting = age < 20 ? "What's up?" : "Hello";
+
+if (x < y)  
+  Console.WriteLine("greater");
+
+if (x != 100) {    
+  x *= 5; 
+  y *= 2; 
+} 
+else 
+  z *= 6;
+
+string color = "red";
+switch (color) {    //자료형 제한이 없다.
+  case "red":    r++;    break;  // break 꼭 필요
+  case "blue":   b++;   break; 
+  case "green": g++;   break; 
+  default: other++;     break; 
+}
+Java 7이후부터 switch문에 문자열을 사용할 수 있다.
+
+Java와 달리 C#에서는 case문 다음에 반드시 break문이 존재해야 한다.
+
+10.반복문
+Java
+
+while (i < 10) 
+  i++;
+
+for (i = 2; i <= 10; i += 2) 
+  System.out.println(i);
+
+do 
+  i++; 
+while (i < 10);
+
+for (int i : numArray)  // foreach construct  
+  sum += i;
+
+import java.util.ArrayList;
+ArrayList<Object> list = new ArrayList<Object>();
+list.add(10); 
+list.add("Bisons");
+list.add(2.3);    
+for (Object o : list)
+  System.out.println(o);
+C#
+
+while (i < 10) 
+  i++;
+
+for (i = 2; i <= 10; i += 2) 
+  Console.WriteLine(i);
+
+do 
+  i++; 
+while (i < 10);
+
+foreach (int i in numArray)  
+  sum += i;
+ 
+using System.Collections;
+ArrayList list = new ArrayList();
+list.Add(10);
+list.Add("Bisons");
+list.Add(2.3);
+foreach (Object o in list)
+  Console.WriteLine(o);
+11.배열
+Java
+
+int nums[] = {1, 2, 3};   
+     또는   int[] nums = {1, 2, 3};
+
+for (int i = 0; i < nums.length; i++)
+  System.out.println(nums[i]);
+
+String names[] = new String[5];
+names[0] = "David";
+
+float twoD[][] = new float[rows][cols];
+twoD[2][0] = 4.5;
+
+int[][] jagged = new int[5][]; 
+jagged[0] = new int[5]; 
+jagged[1] = new int[2]; 
+jagged[2] = new int[3]; 
+jagged[0][4] = 5;
+C#
+
+int[] nums = {1, 2, 3};
+
+
+for (int i = 0; i < nums.Length; i++)
+  Console.WriteLine(nums[i]);
+
+string[] names = new string[5];
+names[0] = "David";
+
+float[,] twoD = new float[rows, cols];
+twoD[2,0] = 4.5f;
+
+int[][] jagged = new int[3][] {
+    new int[5], new int[2], new int[3] }; 
+jagged[0][4] = 5;
+Java와 달리 C#에서는 배열을 나타내는 대괄호 []는 반드시 자료형 다음에 와야 한다.
+
+배열의 초기화 시에도, Java와 달리 C#에서는 배열의 크기와 초기값의 수가 일치해야 한다.
+
+C#에서는 Jagged 배열 외에 다차원 배열을 추가로 지원한다.
+
+
+12.메서드
+Java
+
+// 값을 반환
+int Add(int x, int y) { 
+   return x + y; 
+}
+
+int sum = Add(2, 3);
+// 결과값을 반환하지 않음
+void PrintSum(int x, int y) { 
+   System.out.println(x + y); 
+}
+PrintSum(2, 3); 
+
+// 값에 의한 전달
+void TestFunc(int x, Point p) {
+   x++; 
+   p.x++;       // 객체 값 변경
+   p = null;    // 객체 참조를 제거 
+}
+class Point { 
+   public int x, y; 
+}
+Point p = new Point(); 
+p.x = 2; 
+int a = 1; 
+TestFunc(a, p);
+System.out.println(a + " " + p.x + " " + (p == null) );  // 1 3 false 
+
+
+
+
+// 임의의 갯수의 매개변수
+int Sum(int ... nums) {
+  int sum = 0;
+  for (int i : nums)
+    sum += i;
+  return sum;
+}
+int total = Sum(4, 3, 2, 1);   // returns 10
+C#
+
+// 값을 반환
+int Add(int x, int y) { 
+   return x + y; 
+}
+
+int sum = Add(2, 3);
+// 결과값을 반환하지 않음
+void PrintSum(int x, int y) { 
+   Console.WriteLine(x + y); 
+}
+PrintSum(2, 3); 
+
+// 값에 의한 전달, ref, out
+void TestFunc(int x, ref int y, out int z, Point p1, ref Point p2) { 
+   x++;  y++;  z = 5; 
+   p1.x++;       // 객체 값 변경     
+   p1 = null;    // 객체 참조를 제거 
+   p2 = null;   // 객체 참조를 제거 
+}
+class Point { 
+   public int x, y; 
+}
+Point p1 = new Point(); 
+Point p2 = new Point(); 
+p1.x = 2; 
+int a = 1, b = 1, c;   // out은 초기화 필요 없음
+TestFunc(a, ref b, out c, p1, ref p2); 
+Console.WriteLine("{0} {1} {2} {3} {4}", 
+   a, b, c, p1.x, p2 == null);   // 1 2 5 3 True
+
+// 임의의 갯수의 매개변수
+int Sum(params int[] nums) {
+  int sum = 0;
+  foreach (int i in nums)
+    sum += i;
+  return sum;
+}
+int total = Sum(4, 3, 2, 1);   // returns 10
+C#에서는 값 형식의 데이터를 참조 형식으로 매개변수를 전달하기 위해서 ref, out 키워드를 지원한다.
+
+ref의 경우 사용하기 전에 반드시 초기화 되어 있어야 하고, out의 경우 메서드 내에서 사용하기 전에 값을 할당해야 한다.
+
+임의의 갯수의 매개변수를 전달 받으려는 경우, Java는 ...을, C#은 params 키워드를 사용한다.
+
+
+
+13.문자열
+Java
+
+// 결합
+String school = "Harding "; 
+school = school + "University";   // school is "Harding University"
+
+// 비교
+String mascot = "Bisons"; 
+if (mascot == "Bisons")    // 틀려!
+if (mascot.equals("Bisons"))   // true
+if (mascot.equalsIgnoreCase("BISONS"))   // true
+if (mascot.compareTo("Bisons") == 0)   // true
+System.out.println(mascot.substring(2, 5));   // Prints "son"
+
+// 날짜
+java.util.Calendar c 
+  = new java.util.GregorianCalendar(1973, 10, 12);
+String s 
+  = String.format("My birthday: %1$tb %1$te, %1$tY", c);
+
+// 조작가능한 문자열 
+StringBuffer buffer = new StringBuffer("two "); 
+buffer.append("three "); 
+buffer.insert(0, "one "); 
+buffer.replace(4, 7, "TWO"); 
+System.out.println(buffer);     // Prints "one TWO three"
+
+String path = "\\\\FileShare\\Directory\\file.txt";
+C#
+
+// 결합
+string school = "Harding "; 
+school = school + "University";   // school is "Harding University"
+
+// 비교
+string mascot = "Bisons"; 
+if (mascot == "Bisons")    // true
+if (mascot.Equals("Bisons"))   // true
+if (mascot.ToUpper().Equals("BISONS"))   // true
+if (mascot.CompareTo("Bisons") == 0)    // true
+Console.WriteLine(mascot.Substring(2, 3));    // Prints "son"
+
+// 날짜
+DateTime dt 
+  = new DateTime(1973, 10, 12);
+string s 
+  = "My birthday: " + dt.ToString("MMM dd, yyyy");
+
+
+// 조작가능한 문자열 
+System.Text.StringBuilder buffer = new System.Text.StringBuilder("two "); 
+buffer.Append("three "); 
+buffer.Insert(0, "one "); 
+buffer.Replace("two", "TWO"); 
+Console.WriteLine(buffer);     // Prints "one TWO three"
+string path = @"\\FileShare\Directory\file.txt";
+문자열 비교시에, Java는 equals() 메서드를 사용하지만, C#에서는 == 또는 != 연산자를 사용할 수 있다.
+
+C#에서는 변수에 할당되는 문자열 앞에 @을 붙여서 이스케잎 문자를 효율적으로 처리할 수 있다.
+
+14.예외처리
+Java
+
+// 메서드에서 예외를 던질 수 있도록 선언되어야 함
+Exception ex 
+  = new Exception("Something is really wrong."); 
+throw ex;  
+
+try {
+  y = 0; 
+  x = 10 / y;
+} catch (Exception ex) {
+  System.out.println(ex.getMessage()); 
+} finally {
+  // Code that always gets executed
+}
+C#
+
+Exception up 
+  = new Exception("Something is really wrong."); 
+throw up;  // ha ha
+
+try {
+  y = 0; 
+  x = 10 / y;
+} catch (Exception ex) { // 매개변수가 없어도 됨
+  Console.WriteLine(ex.Message); 
+} finally {
+  // Code that always gets executed
+}
+C#의 catch 블록에서 매개변수를 생략할 수도 있다.
+
+C#에서는 throws 키워드가 없다.
+
+15.클래스 / 인터페이스
+Java
+
+접근 키워드
+public
+private
+protected
+static
+
+
+
+// 상속
+class FootballGame extends Competition {
+  ...
+}
+
+// 인터페이스
+interface IAlarmClock {
+  ...
+}
+
+// 인터페이스의 상속
+interface IAlarmClock extends IClock {
+  ...
+}
+
+// 인터페이스 구현
+class WristWatch implements IAlarmClock, ITimer {
+   ...
+}
+C#
+
+접근 키워드
+public
+private
+internal
+protected
+protected internal
+static
+
+// 상속
+class FootballGame : Competition {
+  ...
+}
+
+// 인터페이스
+interface IAlarmClock {
+  ...
+}
+
+// 인터페이스의 상속
+interface IAlarmClock : IClock {
+  ...
+}
+
+// 인터페이스 구현
+class WristWatch : IAlarmClock, ITimer {
+   ...
+}
+Java의 기본 접근 제한자는 동일 패키지 내에서 접근 가능인 반면, C#에서는 private이다.
+
+C#의 internal 키워드는 현재 어셈블리 내에서만 접근 가능하도록 지정하는 것이며, 어셈블리는 Java의 Jar파일과 유사한 개념이다.
+
+Java에서 클래스가 더이상 상속 될 수 없도록 지정하는 final 키워드 대신, C#에서는 sealed 키워드를 사용한다.
+
+Java에서 상속과 구현을 나타내는 키워드인 extends와 implements 대신, C#에서는 :을 사용한다.
+
+Java의 super 키워드 대신, C#에서는 base 키워드를 사용한다.
+
+Java와 달리, C#에서는 오버라이드 될 메서드에는 virtual 키워드를 오버라이드 하는 메서드에는 override 키워드를 사용한다.
+
+C#에서는 인덱서를 지원하므로 이를 이용하면 클래스나 구조체를 배열처럼 다룰 수 있다.
+
+16.객체
+Java
+
+SuperHero hero = new SuperHero();
+hero.setName("SpamMan"); 
+hero.setPowerLevel(3); 
+
+hero.Defend("Laura Jones");
+SuperHero.Rest();  // 정적 메서드 호출
+SuperHero hero2 = hero;   // 동일한 객체를 참조
+
+hero2.setName("WormWoman"); 
+System.out.println(hero.getName()); 
+
+hero = null;   // Free the object
+if (hero == null)
+  hero = new SuperHero();
+Object obj = new SuperHero(); 
+System.out.println("object's type: " + obj.getClass().toString()); 
+if (obj instanceof SuperHero) 
+  System.out.println("Is a SuperHero object.");
+C#
+
+SuperHero hero = new SuperHero(); 
+hero.Name = "SpamMan"; 
+hero.PowerLevel = 3;
+
+hero.Defend("Laura Jones");
+SuperHero.Rest();   // 정적 메서드 호출
+SuperHero hero2 = hero;   // 동일한 객체를 참조
+ 
+hero2.Name = "WormWoman"; 
+Console.WriteLine(hero.Name);  
+
+hero = null ;   // Free the object
+if (hero == null)
+  hero = new SuperHero();
+Object obj = new SuperHero(); 
+Console.WriteLine("object's type: " + obj.GetType().ToString()); 
+if (obj is SuperHero) 
+  Console.WriteLine("Is a SuperHero object.");
+
+
+17.생성자 / 파괴자
+Java
+
+class SuperHero {
+  private int mPowerLevel;
+
+  public SuperHero() {
+    mPowerLevel = 0;
+  }
+
+  public SuperHero(int powerLevel) {
+    this.mPowerLevel= powerLevel;
+  }
+
+  // 파괴자는 없음
+  protected void finalize() throws Throwable { 
+    super.finalize();   // 항상 부모 요소를 호출
+  }
+}
+C#
+
+class SuperHero {
+  private int mPowerLevel;
+
+  public SuperHero() {
+     mPowerLevel = 0;
+  }
+
+  public SuperHero(int powerLevel) {
+    this.mPowerLevel= powerLevel; 
+  }
+
+  ~SuperHero() {
+    // Destructor code to free unmanaged resources.
+    // Implicitly creates a Finalize method.
+  }
+}
+Java에서는 finalize() 메서드를 사용해서 가비지 컬렉터에 의해 인스턴스가 정리되기 직전에 실행될 메서드를 지정하는 반면, C#에서는 매개변수 없는 생성자와 유사한 형식으로 지정하며 이름 앞에 물결 표시(~)를 붙인다.
+
+18.속성
+Java
+
+private int mSize;
+
+public int getSize() { return mSize; } 
+public void setSize(int value) {
+  if (value < 0) 
+    mSize = 0; 
+  else 
+    mSize = value; 
+}
+
+
+int s = shoe.getSize();
+shoe.setSize(s+1);
+C#
+
+private int mSize;
+
+public int Size { 
+  get { return mSize; } 
+  set { 
+    if (value < 0) 
+      mSize = 0; 
+    else 
+      mSize = value; 
+  } 
+}
+
+shoe.Size++;
+C#에서는 private 멤버 변수의 getter와 setter 메서드를 처리하는 get, set 키워드를 지원한다.
+
+19.구조체
+Java
+
+x
+C#
+
+x
+x
+
+프로그램 구조
+Java
+
+ 
+C#
+
+struct StudentRecord {
+  public string name;
+  public float gpa;
+
+  public StudentRecord(string name, float gpa) {
+    this.name = name;
+    this.gpa = gpa;
+  }
+}
+
+StudentRecord stu = new StudentRecord("Bob", 3.5f);
+StudentRecord stu2 = stu;  
+
+stu2.name = "Sue";
+Console.WriteLine(stu.name);    // Prints "Bob"
+Console.WriteLine(stu2.name);   // Prints "Sue"
+C#에서는 클래스와 유사한 구조체라는 자료형을 지원한다. 단, 구조체는 상속이 불가능하고, 참조형 데이터가 아니다.
+
+20.이벤트
+Java
+
+ 
+C#
+
+window.ClickedEvent += MyEventHandler;
+Java의 경우 이벤트를 수신할 클래스에서 Listener를 구현한 후 이벤트를 발생시키는 객체에 등록(register)하지만, C#에서 이벤트는 이벤트를 발생시키는 객체의 멤버이므로 이벤트 핸들러 메서드를 추가하기만 하면 된다.
+
+C#에서는 이벤트 핸들러 메서드를 위해 delegate 키워드를 제공한다. 딜리게이트는 함수 포인터와 유사한 개념이다.
+
+21.콘솔 입출력
+Java
+
+java.io.DataInput in 
+= new java.io.DataInputStream(System.in);
+System.out.print("What is your name? ");
+String name = in.readLine();
+
+System.out.print("How old are you? ");
+int age = Integer.parseInt(in.readLine());
+System.out.println(name + " is " + age + " years old.");
+int c = System.in.read();   // Read single char
+System.out.println(c);      // Prints 65 if user enters "A"
+
+// The studio costs $499.00 for 3 months.
+System.out.printf("The %s costs $%.2f for %d months.%n", "studio", 499.0, 3);
+
+// Today is 06/25/04
+System.out.printf("Today is %tD\n", new java.util.Date());
+C#
+
+Console.Write("What's your name? ");
+string name = Console.ReadLine();
+
+
+
+Console.Write("How old are you? ");
+int age = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("{0} is {1} years old.", name, age);
+// 또는
+Console.WriteLine(name + " is " + age + " years old.");int c = Console.Read();  // Read single char
+Console.WriteLine(c);    // Prints 65 if user enters "A"
+
+// The studio costs $499.00 for 3 months.
+Console.WriteLine("The {0} costs {1:C} for {2} months.\n", "studio", 499.0, 3);
+
+// Today is 06/25/2004
+Console.WriteLine("Today is " + DateTime.Now.ToShortDateString());
+22.파일 입출력
+Java
+
+import java.io.*;
+
+// Character stream writing
+FileWriter writer 
+  = new FileWriter("c:\\myfile.txt");
+writer.write("Out to file.\n");
+writer.close();
+
+// Character stream reading
+FileReader reader 
+  = new FileReader("c:\\myfile.txt");
+BufferedReader br = new BufferedReader(reader);
+String line = br.readLine(); 
+while (line != null) {
+  System.out.println(line); 
+  line = br.readLine(); 
+} 
+reader.close();
+
+// Binary stream writing
+FileOutputStream out 
+  = new FileOutputStream("c:\\myfile.dat");
+out.write("Text data".getBytes());
+out.write(123);
+out.close();
+
+// Binary stream reading
+FileInputStream in 
+  = new FileInputStream("c:\\myfile.dat");
+byte buff[] = new byte[9];
+in.read(buff, 0, 9);   // Read first 9 bytes into buff
+String s = new String(buff);
+int num = in.read();   // Next is 123
+in.close();
+C#
+
+using System.IO;
+
+// Character stream writing
+StreamWriter writer 
+  = File.CreateText("c:\\myfile.txt"); 
+writer.WriteLine("Out to file."); 
+writer.Close();
+
+// Character stream reading
+StreamReader reader 
+  = File.OpenText("c:\\myfile.txt"); 
+string line = reader.ReadLine(); 
+while (line != null) {
+  Console.WriteLine(line); 
+  line = reader.ReadLine(); 
+} 
+reader.Close();
+
+
+
+// Binary stream writing
+BinaryWriter out 
+  = new BinaryWriter(File.OpenWrite("c:\\myfile.dat")); 
+out.Write("Text data"); 
+out.Write(123); 
+out.Close();
+
+// Binary stream reading
+BinaryReader in 
+  = new BinaryReader(File.OpenRead("c:\\myfile.dat")); 
+string s = in.ReadString(); 
+int num = in.ReadInt32(); 
+in.Close();
+
+
+C#에는 이 외에 인덱서, unsafe, fixed 등이 더 있음.
+
+참고 자료:
+
+http://www.harding.edu/fmccown/java_csharp_comparison.html
+
+http://msdn.microsoft.com/en-us/library/ms228602(v=vs.90)
+
+
+
+출처: https://www.elex.pe.kr/entry/Java-cf-C-Sharp?category=173316 [Elex]
