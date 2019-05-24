@@ -1,0 +1,159 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Same Game
+</name>
+</assembly>
+<members>
+<member name="T:Same_Game.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:Same_Game.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:Same_Game.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:Same_Game.Cell">
+ <summary>マスを扱うクラス</summary>
+</member>
+<member name="P:Same_Game.Cell.Status">
+ <summary>マスの状態
+ 0…空白</summary>
+</member>
+<member name="P:Same_Game.Cell.Selected">
+ <summary>マスが選択されているかどうか</summary>
+</member>
+<member name="P:Same_Game.Cell.Position">
+ <summary>マスの座標</summary>
+</member>
+<member name="M:Same_Game.Cell.Draw(System.Drawing.Graphics,System.Drawing.Point,Same_Game.CellImages)">
+ <summary>1つのマスの描画</summary>
+ <param name="CellSize">マスの大きさを座標で指定</param>
+ <param name="Images">このマスの描画に使う画像のクラス</param>
+</member>
+<member name="T:Same_Game.Form1">
+ <summary>ゲーム画面を扱うクラス</summary>
+</member>
+<member name="M:Same_Game.Form1.Form1_Load(System.Object,System.EventArgs)">
+ <summary>Form1の読み込み時</summary>
+</member>
+<member name="M:Same_Game.Form1.Form1_SizeChanged(System.Object,System.EventArgs)">
+ <summary>Form1のサイズ変更時</summary>
+</member>
+<member name="M:Same_Game.Form1.Form1_Closing(System.Object,System.ComponentModel.CancelEventArgs)">
+ <summary>Form1を閉じようとしているとき</summary>
+</member>
+<member name="M:Same_Game.Form1.Stage_MsgScore(System.Object,System.EventArgs)">
+ <summary>マスを選択したときのStageのイベント</summary>
+</member>
+<member name="M:Same_Game.Form1.Stage_CellsClear(System.Object,System.EventArgs)">
+ <summary>マスをクリアしたときに発生させるStageのイベント</summary>
+</member>
+<member name="M:Same_Game.Form1.PictureBox1_Click(System.Object,System.EventArgs)">
+ <summary>PictureBox1の操作</summary>
+</member>
+<member name="M:Same_Game.Form1.PictureBox1_MouseMove(System.Object,System.Windows.Forms.MouseEventArgs)">
+ <summary>PictureBox1の上でマウスを動かしたときにマスを選択する</summary>
+</member>
+<member name="M:Same_Game.Form1.PictureBox1_Paint(System.Object,System.Windows.Forms.PaintEventArgs)">
+ <summary>ステージのPictureBox1への描画</summary>
+</member>
+<member name="M:Same_Game.Form1.btnStart_Click(System.Object,System.EventArgs)">
+ <summary>「開始」ボタン</summary>
+</member>
+<member name="M:Same_Game.Form1.StageEnd">
+ <summary>ステージ終了時の処理</summary>
+</member>
+<member name="M:Same_Game.Form1.GameOver">
+ <summary>ゲームオーバー時の処理</summary>
+</member>
+<member name="M:Same_Game.Form1.StageClear">
+ <summary>ステージクリア時の処理</summary>
+</member>
+<member name="M:Same_Game.Form1.LoadHighScore">
+ <summary>ハイスコアを読み込んでlisbHighScoreに表示させる</summary>
+</member>
+<member name="M:Same_Game.Form1.MsgHighScore">
+ <summary>ハイスコアを出したときにメッセージを表示させる</summary>
+</member>
+<member name="M:Same_Game.Form1.HighScore">
+ <summary>ハイスコアのlisbHighScoreへの表示・ファイルへの書き込み</summary>
+</member>
+<member name="T:Same_Game.CellImages">
+ <summary>マスに使う画像を扱うクラス</summary>
+</member>
+<member name="P:Same_Game.CellImages.Images(System.Int32)">
+ <summary>マスに使う画像</summary>
+</member>
+<member name="P:Same_Game.CellImages.SelectedImages(System.Int32)">
+ <summary>マスを選択したときのマスの画像</summary>
+</member>
+<member name="M:Same_Game.CellImages.MakeSelectedImage(System.Drawing.Image,System.Drawing.Color)">
+ <summary>マスを選択したときのマスの画像を作る</summary>
+ <param name="Source">元となる画像ファイル</param>
+ <param name="c">選択の色。元の画像に半透明で重ねる</param>
+</member>
+<member name="T:Same_Game.Stage">
+ <summary>ステージを扱うメインのクラス</summary>
+</member>
+<member name="P:Same_Game.Stage.CellSize">
+ <summary>マスのサイズを座標で指定</summary>
+</member>
+<member name="P:Same_Game.Stage.Cells(System.Int32,System.Int32)">
+ <summary>指定された座標にあるマスを取得する</summary>
+ <param name="x">x座標</param>
+ <param name="y">y座標</param>
+</member>
+<member name="P:Same_Game.Stage.Score">
+ <summary>現在消したところのスコア</summary>
+</member>
+<member name="M:Same_Game.Stage.#ctor">
+ <summary>新しいステージが作成されたときの処理</summary>
+</member>
+<member name="M:Same_Game.Stage.Initialize">
+<summary>ステージの初期化</summary>
+</member>
+<member name="M:Same_Game.Stage.Draw(System.Drawing.Graphics)">
+ <summary>マスの状態を描画</summary>
+</member>
+<member name="M:Same_Game.Stage.CellFromPoint(System.Drawing.Point)">
+ <summary>PictureBoxの座標からその位置にあるセルを取得する</summary>
+</member>
+<member name="E:Same_Game.Stage.MsgScore">
+ <summary>マスを選択したとき、
+ スコアをForm1に表示させるためのイベント</summary>
+</member>
+<member name="M:Same_Game.Stage.CellSelect(Same_Game.Cell)">
+ <summary>同じ状態のマスを選択状態にする</summary>
+ <param name="ThisCell">マス</param>
+</member>
+<member name="M:Same_Game.Stage.CountSelections">
+ <summary>選択マスの数を数える</summary>
+</member>
+<member name="E:Same_Game.Stage.CellsClear">
+ <summary>マスをクリアしたときに発生させるイベント</summary>
+</member>
+<member name="M:Same_Game.Stage.Clear">
+ <summary>選択マスをクリアする</summary>
+ <remarks>選択マスが2個以上の場合にのみこのメソッドを実行する。</remarks>
+</member>
+<member name="M:Same_Game.Stage.Stuff">
+<summary>空白マスの上のマスを落とし、横方向にも詰める</summary>
+</member>
+<member name="M:Same_Game.Stage.IsGameOver">
+ <summary>今のステージで、1か所も消すことができないかどうか</summary>
+</member>
+<member name="M:Same_Game.Stage.Count">
+ <summary>今のステージで、空白以外のマスの個数を数える</summary>
+</member>
+</members>
+</doc>

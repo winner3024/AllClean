@@ -1,0 +1,11 @@
+C:\Users\ASUPAGE\Desktop\Same Game\Same Game\bin\Debug\Same Game.exe
+C:\Users\ASUPAGE\Desktop\Same Game\Same Game\bin\Debug\Same Game.pdb
+C:\Users\ASUPAGE\Desktop\Same Game\Same Game\bin\Debug\Same Game.xml
+C:\Users\ASUPAGE\Desktop\Same Game\Same Game\obj\x86\Debug\Same Game.vbprojAssemblyReference.cache
+C:\Users\ASUPAGE\Desktop\Same Game\Same Game\obj\x86\Debug\Same_Game.Form1.resources
+C:\Users\ASUPAGE\Desktop\Same Game\Same Game\obj\x86\Debug\Same_Game.Resources.resources
+C:\Users\ASUPAGE\Desktop\Same Game\Same Game\obj\x86\Debug\Same Game.vbproj.GenerateResource.cache
+C:\Users\ASUPAGE\Desktop\Same Game\Same Game\obj\x86\Debug\Same Game.vbproj.CoreCompileInputs.cache
+C:\Users\ASUPAGE\Desktop\Same Game\Same Game\obj\x86\Debug\Same Game.exe
+C:\Users\ASUPAGE\Desktop\Same Game\Same Game\obj\x86\Debug\Same Game.xml
+C:\Users\ASUPAGE\Desktop\Same Game\Same Game\obj\x86\Debug\Same Game.pdb
