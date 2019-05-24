@@ -1,0 +1,70 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+puzzle
+</name>
+</assembly>
+<members>
+<member name="T:puzzle.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:puzzle.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:puzzle.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:puzzle.Board.Move(System.Int32,System.Int32)">
+ <summary>パネルを動かす</summary>
+ <param name="X">動かすパネルのX座標</param>
+ <param name="Y">動かすパネルのY座標</param>
+ <returns>動かせたらTrue</returns>
+</member>
+<member name="M:puzzle.Board.CanMove(System.Int32,System.Int32)">
+ <summary>パネルが動かせるか調べる</summary>
+ <param name="X">調べたいパネルのX座標</param>
+ <param name="Y">調べたいパネルのY座標</param>
+ <returns>動かせる方向(動かせないときはfales)</returns>
+</member>
+<member name="P:puzzle.Board.Panels(System.Int32,System.Int32)">
+ <summary>パネルのプロパティ</summary>
+ <param name="X">パネルのX座標</param>
+ <param name="Y">パネルのY座標</param>
+ <returns>パネルを返す</returns>
+</member>
+<member name="M:puzzle.Board.MovePanel">
+ <summary>動かせる座標を調べる</summary>
+ <returns>動かせる座標を配列で返す</returns>
+</member>
+<member name="M:puzzle.Board.BlackPanel">
+ <summary>空パネルの座標を返す</summary>
+</member>
+<member name="M:puzzle.Board.Shuffle(System.Drawing.Image)">
+ <summary>画像を表示する</summary>
+ <param name="Img">表示する画像を受け取る</param>
+</member>
+<member name="M:puzzle.Board.Rand(System.Int32)">
+ <summary>shuffle関数で表示した画像をバラバラにする</summary>
+ <param name="Num">シャッフル回数を指定</param>
+ <returns></returns>
+</member>
+<member name="M:puzzle.Panel.Draw(System.Drawing.Graphics)">
+ <summary>描画処理</summary>
+ <param name="g">グラフィックオブジェクト</param>
+</member>
+<member name="P:puzzle.Panel.Image">
+ <summary>パネルの画像プロパティ</summary>
+</member>
+<member name="M:puzzle.Panel.Focus">
+ <summary>パネルにフォーカスを設定する</summary>
+</member>
+</members>
+</doc>

@@ -1,0 +1,12 @@
+C:\Users\ASUPAGE\Documents\石田作業用\制作物\puzzle\puzzle\bin\x64\Debug\puzzle.exe.config
+C:\Users\ASUPAGE\Documents\石田作業用\制作物\puzzle\puzzle\bin\x64\Debug\puzzle.exe
+C:\Users\ASUPAGE\Documents\石田作業用\制作物\puzzle\puzzle\bin\x64\Debug\puzzle.pdb
+C:\Users\ASUPAGE\Documents\石田作業用\制作物\puzzle\puzzle\bin\x64\Debug\puzzle.xml
+C:\Users\ASUPAGE\Documents\石田作業用\制作物\puzzle\puzzle\obj\x64\Debug\puzzle.vbprojAssemblyReference.cache
+C:\Users\ASUPAGE\Documents\石田作業用\制作物\puzzle\puzzle\obj\x64\Debug\puzzle.MainForm.resources
+C:\Users\ASUPAGE\Documents\石田作業用\制作物\puzzle\puzzle\obj\x64\Debug\puzzle.Resources.resources
+C:\Users\ASUPAGE\Documents\石田作業用\制作物\puzzle\puzzle\obj\x64\Debug\puzzle.vbproj.GenerateResource.cache
+C:\Users\ASUPAGE\Documents\石田作業用\制作物\puzzle\puzzle\obj\x64\Debug\puzzle.vbproj.CoreCompileInputs.cache
+C:\Users\ASUPAGE\Documents\石田作業用\制作物\puzzle\puzzle\obj\x64\Debug\puzzle.exe
+C:\Users\ASUPAGE\Documents\石田作業用\制作物\puzzle\puzzle\obj\x64\Debug\puzzle.xml
+C:\Users\ASUPAGE\Documents\石田作業用\制作物\puzzle\puzzle\obj\x64\Debug\puzzle.pdb
