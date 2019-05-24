@@ -1,8 +1,6 @@
-H = InputBox("g’·icmj‚ð“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B")
-W = InputBox("‘ÌdiKgj‚ð“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B")
+H = InputBox("èº«é•·ï¼ˆcmï¼‰ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚")
+W = InputBox("ä½“é‡ï¼ˆKgï¼‰ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚")
 H = H/100
 BMI = W/H/H
 RS = Round(BMI,1)
-
-End Select
-MsgBox "‚ ‚È‚½‚ÌBMI‚Í "& RS &"‚Å‚·",,"BMI"
+MsgBox "ã‚ãªãŸã®BMIã¯ "& RS &"ã§ã™",,"BMI"
