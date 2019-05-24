@@ -1,0 +1,12 @@
+C:\Users\ASUPAGE\Documents\石田作業用\制作物\Reverse\Reverse\obj\Debug\Reverse.vbprojAssemblyReference.cache
+C:\Users\ASUPAGE\Documents\石田作業用\制作物\Reverse\Reverse\obj\Debug\Reverse.Form1.resources
+C:\Users\ASUPAGE\Documents\石田作業用\制作物\Reverse\Reverse\obj\Debug\Reverse.Resources.resources
+C:\Users\ASUPAGE\Documents\石田作業用\制作物\Reverse\Reverse\obj\Debug\Reverse.vbproj.GenerateResource.cache
+C:\Users\ASUPAGE\Documents\石田作業用\制作物\Reverse\Reverse\obj\Debug\Reverse.vbproj.CoreCompileInputs.cache
+C:\Users\ASUPAGE\Documents\石田作業用\制作物\Reverse\Reverse\bin\Debug\Reverse.exe.config
+C:\Users\ASUPAGE\Documents\石田作業用\制作物\Reverse\Reverse\bin\Debug\Reverse.exe
+C:\Users\ASUPAGE\Documents\石田作業用\制作物\Reverse\Reverse\bin\Debug\Reverse.pdb
+C:\Users\ASUPAGE\Documents\石田作業用\制作物\Reverse\Reverse\bin\Debug\Reverse.xml
+C:\Users\ASUPAGE\Documents\石田作業用\制作物\Reverse\Reverse\obj\Debug\Reverse.exe
+C:\Users\ASUPAGE\Documents\石田作業用\制作物\Reverse\Reverse\obj\Debug\Reverse.xml
+C:\Users\ASUPAGE\Documents\石田作業用\制作物\Reverse\Reverse\obj\Debug\Reverse.pdb
