@@ -1,0 +1,1 @@
+App.config内のDbPath valueの値をフォルダを配置した場所に書き変えること
